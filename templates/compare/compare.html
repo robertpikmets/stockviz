@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% extends "compare/base.html" %}
+{% load staticfiles %}
+  {% block body_block %}
+  <link rel="stylesheet" href="{% static "css/compare.css" %}">
+    <h1 align="center">AAPL vs MSFT</h1>
+    <p align="center">Note: this is just an example. Stockviz is not working yet :(</p>
+    <p align="center">Lots of fundamental analysis and difference calculations will follow downstairs</p>
+    <img id="graph" src="{% static "images/foo.png" %}" alt="Uh Oh, didn't show!">
+
+    <div id="alltickers" class="container">
+      <div class="row">
+        <div id="leftcol" class="col">
+          <h2>Apple Inc.</h2>
+        </div>
+        <div id="rightcol" class="col">
+          <h2>Microsoft</h2>
+        </div>
+      </div>
+    </div>
+  {% endblock %}

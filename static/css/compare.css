@@ -1,0 +1,30 @@
+#graph{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#alltickers{
+  text-align: center;
+}
+.form-inline{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#leftcol{
+  border-right: 1px solid #a1a2a3;
+  padding-top: 4px;
+}
+#rightcol{
+  padding-top: 4px;
+}
+hr{
+  border-color: #a1a2a3;
+}
+#intro{
+  padding-bottom: 4px;
+}
+.btn-outline-dark{
+  margin-bottom: 5px;
+}

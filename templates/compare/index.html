@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% extends "compare/base.html" %}
+{% load staticfiles %}
+  {% block body_block %}
+    <link rel="stylesheet" href="{% static "css/indexstyle.css" %}">
+    <img class="mainlogo" src="{% static "images/shopifylogo.png" %}" width="300" height="90" alt="oops"><br>
+    <p class="lead" align="center">Stockviz helps to compare up to 3 stocks for investing/trading purposes by nicely visualizing differences in financials and other data.</p>
+    <p id="intro" class="lead" align="center">Either type in quotes and add them to the comparision or search for
+      companies by their industry. S&P500 only at the moment.</p>
+    <hr>
+
+    <div id="options" class="container">
+      <div class="row">
+        <div id="leftcol" class="col">
+          <form id="form" onsubmit="return false;">
+            <input type="text" id="userInput"><br><br>
+            <input type="submit" class="btn btn-dark my-2 my-sm-0" value="Add symbol" onclick="save_input()">
+          </form><br>
+          <p>Chosen ticker: <b id='current'></b></p>
+          <p>All tickers (max 3):</p>
+          <div id="tickers" class="divTickers">
+            <ul class="list-group" id="tickerList">
+              <!--
+              <li id="favourite" class="list-group-item">Something</li>
+              <li class="list-group-item">Something</li>
+              <li class="list-group-item">Something</li>
+            -->
+            </ul>
+          </div>
+          <!--
+          <form method="POST">
+
+            <input type="submit" class="btn btn-dark my-2 my-sm-0" value="Add symbol">
+          </form>
+        -->
+        </div>
+        <div id="rightcol" class="col">
+          <p class="lead"><strong>Select an industry</strong></p>
+          <table>
+            <div class="industries">
+              <button type="button" class="btn btn-outline-dark">Energy</button>
+              <button type="button" class="btn btn-outline-dark">Materials</button>
+              <button type="button" class="btn btn-outline-dark">Industrials</button>
+              <button type="button" class="btn btn-outline-dark">Consumer Discretionary</button>
+              <button type="button" class="btn btn-outline-dark">Consumer Staples</button>
+              <button type="button" class="btn btn-outline-dark">Health Care</button>
+              <button type="button" class="btn btn-outline-dark">Financials</button>
+              <button type="button" class="btn btn-outline-dark">Information Technology</button>
+              <button type="button" class="btn btn-outline-dark">Telecommunication Services</button>
+              <button type="button" class="btn btn-outline-dark">Utilities</button>
+              <button type="button" class="btn btn-outline-dark">Real Estate</button>
+            </div>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+  {% endblock %}
